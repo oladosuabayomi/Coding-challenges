@@ -92,3 +92,33 @@ if (averagePointDolphins > averagePointKoalas && averagePointDolphins >= minimum
 } else {
     console.log(`No team wins the trophy 🏆`)
 }
+
+
+// Coding Challenge #4
+
+// Get score data
+let firstScoreDolphins = 85;
+let secondScoreDolphins = 54;
+let thirdScoreDolphins = 41;
+
+let firstScoreKoalas = 23;
+let secondScoreKoalas = 34;
+let thirdScoreKoalas = 27;
+
+// Calculate the average score
+let calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
+const averageScoreKoalas = calcAverage(firstScoreKoalas, secondScoreKoalas, thirdScoreKoalas);
+const averageScoreDolphins = calcAverage(firstScoreDolphins, secondScoreDolphins, thirdScoreDolphins);
+
+// Check for the winner
+const checkWinner = function (avgDolphins, avgKoalas) {
+    if (avgDolphins >= 2 * avgKoalas) {
+        console.log(`Dolphins win 🏆 (${avgDolphins} vs ${avgKoalas})`)
+    } else if (avgKoalas >= 2 * avgDolphins) {
+        console.log(`Koalas win 🏆 (${avgKoalas} vs ${avgDolphins})`)
+    } else {
+        console.log(`No team win!`)
+    }
+}
+
+checkWinner(averageScoreKoalas, averageScoreDolphins);
