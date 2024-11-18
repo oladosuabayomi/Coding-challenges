@@ -1,5 +1,12 @@
 // CODING CHALLENGE #1
 
+// Coding Challenge () tip calculator 
+// const bill = 275;
+// const tip = bill >= 50 && bill <= 300 ? (15 / 100) * bill : (20 / 100) * bill;
+// console.log(tip);
+
+
+
 // DATA 1
 
 /* const markMass = 78;
@@ -42,17 +49,17 @@ const johnHeight = 1.95; */
 // const pointThreeKoalas = 123;
 
 
-const pointOneDolphins = 97;
-const pointTwoDolphins = 112;
-const pointThreeDolphins = 101;
+// const pointOneDolphins = 97;
+// const pointTwoDolphins = 112;
+// const pointThreeDolphins = 101;
 
-const pointOneKoalas = 109;
-const pointTwoKoalas = 95;
-const pointThreeKoalas = 106;
+// const pointOneKoalas = 109;
+// const pointTwoKoalas = 95;
+// const pointThreeKoalas = 106;
 
-const averagePointDolphins = (pointOneDolphins + pointTwoDolphins + pointThreeDolphins) / 3;
-const averagePointKoalas = (pointOneKoalas + pointTwoKoalas + pointThreeKoalas) / 3;
-console.log(averagePointDolphins, averagePointKoalas);
+// const averagePointDolphins = (pointOneDolphins + pointTwoDolphins + pointThreeDolphins) / 3;
+// const averagePointKoalas = (pointOneKoalas + pointTwoKoalas + pointThreeKoalas) / 3;
+// console.log(averagePointDolphins, averagePointKoalas);
 
 
 // if (averagePointDolphins > averagePointKoalas) {
@@ -79,7 +86,7 @@ console.log(averagePointDolphins, averagePointKoalas);
 
 
 // Bonus 2
-const minimumSocre = 100;
+/* const minimumSocre = 100;
 
 if (averagePointDolphins > averagePointKoalas && averagePointDolphins >= minimumSocre) {
     console.log(`Team Dolphins is the winner 🎉🎉`);
@@ -92,9 +99,9 @@ if (averagePointDolphins > averagePointKoalas && averagePointDolphins >= minimum
 } else {
     console.log(`No team wins the trophy 🏆`)
 }
+ */
 
-
-// Coding Challenge #4
+/* // Coding Challenge #4
 
 // Get score data
 let firstScoreDolphins = 85;
@@ -122,3 +129,23 @@ const checkWinner = function (avgDolphins, avgKoalas) {
 }
 
 checkWinner(averageScoreKoalas, averageScoreDolphins);
+ */
+
+
+// Coding Challenge #5 tip calculator 
+
+// creating a fuction that calculates and output tip value
+const calcTip = function (bill) {
+    const tip = bill >= 50 && bill <= 300 ? (15 / 100) * bill : (20 / 100) * bill;
+    return tip;
+}
+
+const bills = [125, 555, 44];
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[bills.length - 1])];
+
+const total = [(bills[0] + tips[0]), (bills[1] + tips[1]), (bills[bills.length - 1] + tips[bills.length - 1])];
+
+
+console.log(tips)
+console.log(total)
+
