@@ -1,6 +1,6 @@
 // CODING CHALLENGE #1
 
-// Coding Challenge () tip calculator 
+// Coding Challenge () tip calculator
 // const bill = 275;
 // const tip = bill >= 50 && bill <= 300 ? (15 / 100) * bill : (20 / 100) * bill;
 // console.log(tip);
@@ -132,20 +132,53 @@ checkWinner(averageScoreKoalas, averageScoreDolphins);
  */
 
 
-// Coding Challenge #5 tip calculator 
+// Coding Challenge #5 tip calculator
 
 // creating a fuction that calculates and output tip value
-const calcTip = function (bill) {
-    const tip = bill >= 50 && bill <= 300 ? (15 / 100) * bill : (20 / 100) * bill;
-    return tip;
+// const calcTip = function (bill) {
+//     const tip = bill >= 50 && bill <= 300 ? (15 / 100) * bill : (20 / 100) * bill;
+//     return tip;
+// }
+
+// const bills = [125, 555, 44];
+// const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[bills.length - 1])];
+
+// const total = [(bills[0] + tips[0]), (bills[1] + tips[1]), (bills[bills.length - 1] + tips[bills.length - 1])];
+
+
+// console.log(tips)
+// console.log(total)
+
+
+// challenge #6
+const markMiller = {
+    fullName: `Mark Miller`,
+    mass: 78,
+    height: 1.69,
+
+    calcBMI: function () {
+        this.BMI = this.mass / this.height ** 2;   // Object method
+        return this.BMI;
+    }
+};
+
+const johnSmith = {
+    fullName: `John Smith`,
+    mass: 92,
+    height: 1.95,
+
+    calcBMI: function () {
+        this.BMI = this.mass / this.height ** 2;   // Object method
+        return this.BMI;
+    }
+};
+
+console.log(markMiller.calcBMI());
+console.log(johnSmith.calcBMI());
+
+
+if (markMiller.BMI > johnSmith.BMI) {
+    console.log(`${markMiller.fullName}'s BMI (${markMiller.BMI}) is higher than ${johnSmith.fullName}'s (${johnSmith.BMI})`);
+} else {
+    console.log(`${johnSmith.fullName}'s BMI ${johnSmith.BMI} is higher than ${markMiller.fullName}'s ${markMiller.BMI}`);
 }
-
-const bills = [125, 555, 44];
-const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[bills.length - 1])];
-
-const total = [(bills[0] + tips[0]), (bills[1] + tips[1]), (bills[bills.length - 1] + tips[bills.length - 1])];
-
-
-console.log(tips)
-console.log(total)
-
