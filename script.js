@@ -151,34 +151,64 @@ checkWinner(averageScoreKoalas, averageScoreDolphins);
 
 
 // challenge #6
-const markMiller = {
-    fullName: `Mark Miller`,
-    mass: 78,
-    height: 1.69,
+// const markMiller = {
+//     fullName: `Mark Miller`,
+//     mass: 78,
+//     height: 1.69,
 
-    calcBMI: function () {
-        this.BMI = this.mass / this.height ** 2;   // Object method
-        return this.BMI;
-    }
-};
+//     calcBMI: function () {
+//         this.BMI = this.mass / this.height ** 2;   // Object method
+//         return this.BMI;
+//     }
+// };
 
-const johnSmith = {
-    fullName: `John Smith`,
-    mass: 92,
-    height: 1.95,
+// const johnSmith = {
+//     fullName: `John Smith`,
+//     mass: 92,
+//     height: 1.95,
 
-    calcBMI: function () {
-        this.BMI = this.mass / this.height ** 2;   // Object method
-        return this.BMI;
-    }
-};
+//     calcBMI: function () {
+//         this.BMI = this.mass / this.height ** 2;   // Object method
+//         return this.BMI;
+//     }
+// };
 
-console.log(markMiller.calcBMI());
-console.log(johnSmith.calcBMI());
+// console.log(markMiller.calcBMI());
+// console.log(johnSmith.calcBMI());
 
 
-if (markMiller.BMI > johnSmith.BMI) {
-    console.log(`${markMiller.fullName}'s BMI (${markMiller.BMI}) is higher than ${johnSmith.fullName}'s (${johnSmith.BMI})`);
-} else {
-    console.log(`${johnSmith.fullName}'s BMI ${johnSmith.BMI} is higher than ${markMiller.fullName}'s ${markMiller.BMI}`);
+// if (markMiller.BMI > johnSmith.BMI) {
+//     console.log(`${markMiller.fullName}'s BMI (${markMiller.BMI}) is higher than ${johnSmith.fullName}'s (${johnSmith.BMI})`);
+// } else {
+//     console.log(`${johnSmith.fullName}'s BMI ${johnSmith.BMI} is higher than ${markMiller.fullName}'s ${markMiller.BMI}`);
+// }
+
+
+// Challange #7 (Improving the tip calculator)
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+
+const tips = [];
+const totals = [];
+
+const calcTip = function (bills) {
+    return bills >= 50 && bills <= 300 ? (15 / 100) * bills : (20 / 100) * bills;
+
 }
+
+for (let i = 0; i < bills.length; i++) {
+    const tip = calcTip(bills[i]);
+    tips.push(tip);
+    totals.push(bills[i] + tip);
+}
+
+console.log(bills, tips, totals)
+
+const calcAverage = function (arr) {
+    let sum = 0;
+    for (let j = 0; j < arr.length; j++) {
+        sum = sum + arr[j];
+    }
+    return sum / arr.length;
+}
+
+console.log(calcAverage(totals));
