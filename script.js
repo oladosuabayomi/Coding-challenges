@@ -232,21 +232,49 @@ TEST DATA 2: [12, 5, -5, 0, 4]
 */
 /* const arr = [17, 21, 23]; */
 
-const data1 = [17, 21, 23];
-const data2 = [12, 5, -5, 0, 4];
+// const data1 = [17, 21, 23];
+// const data2 = [12, 5, -5, 0, 4];
 
-/* console.log(`... ${data1[0]}ºC ... ${data1[1]}ºC ... ${data1[2]}ºC ... ${data1[3]}ºC`); */
+// /* console.log(`... ${data1[0]}ºC ... ${data1[1]}ºC ... ${data1[2]}ºC ... ${data1[3]}ºC`); */
 
-const printForecast = function (arr) {
-    let str = '';
-    for (let i = 0; i < arr.length; i++) {
-        str += `${arr[i]}ºC in ${[i + 1]} days ... `;
+// const printForecast = function (arr) {
+//     let str = '';
+//     for (let i = 0; i < arr.length; i++) {
+//         str += `${arr[i]}ºC in ${[i + 1]} days ... `;
+//         console.log(str);
+//     }
+
+//     console.log('...' + str);
+// };
+// printForecast(data1);
+
+
+// stair case challage 
+// console.log('.');
+// console.log('..');
+
+// const printRightSidedPyramid = function (height) {
+//     let dot = '';
+//     for (let i = 0; i < height; i++) {
+//         dot += '.'
+//         console.log(dot);
+//     }
+// };
+const printPyramid = function (n) {
+    const mid = Math.floor((2 * n - 1) / 2);
+    for (let row = 0; row < n; row++) {
+        let line = '';
+        for (let col = 0; col < 2 * n - 1; col++) {
+            if (col >= mid - row && col <= mid + row) {
+                line += '#';
+            } else {
+                line += ' ';
+            }
+        }
+        console.log(line);
     }
+}
 
-    console.log('...' + str);
-};
-printForecast(data1);
+printPyramid(5);
 
-
-
-
+// printRightSidedPyramid(4);
