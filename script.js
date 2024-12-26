@@ -278,3 +278,7 @@ const printPyramid = function (n) {
 printPyramid(5);
 
 // printRightSidedPyramid(4);
+
+
+// Simple user Authentication
+
